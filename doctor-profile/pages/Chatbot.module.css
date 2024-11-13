@@ -1,0 +1,125 @@
+/* Main container for the chatbot */
+.chatbotContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #e8f5e9; /* Light green background for calming effect */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    overflow: hidden;
+  }
+  
+  /* Title Section for Inner Voice Branding */
+  .chatbotTitle {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #388e3c; /* Dark green for the title */
+    margin-bottom: 20px;
+  }
+  
+  /* Subtitle Section (tagline) */
+  .chatbotSubtitle {
+    text-align: center;
+    font-size: 16px;
+    color: #66bb6a; /* Lighter green for subtitle */
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  /* The chat window area */
+  .chatWindow {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Chat messages styling */
+  .userMessage, .botMessage {
+    background-color: #ffffff;
+    padding: 12px 18px;
+    margin: 8px 0;
+    border-radius: 20px;
+    max-width: 80%;
+    word-wrap: break-word;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+  }
+  
+  /* Green-themed user message */
+  .userMessage {
+    align-self: flex-end;
+    background-color: #c8e6c9; /* Soft green for user messages */
+  }
+  
+  /* Green-themed bot message */
+  .botMessage {
+    align-self: flex-start;
+    background-color: #a5d6a7; /* Slightly darker green for bot messages */
+  }
+  
+  /* Input container */
+  .inputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+  
+  /* Styling for the input field */
+  .inputField {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #66bb6a; /* Green border */
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .inputField:focus {
+    border-color: #388e3c; /* Darker green when focused */
+  }
+  
+  /* Styling for the send button */
+  .sendButton {
+    background-color: #66bb6a; /* Lively green color */
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sendButton:hover {
+    background-color: #388e3c; /* Darker green on hover */
+  }
+  
+  /* A smooth transition for new messages */
+  .chatWindow .userMessage, .chatWindow .botMessage {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
